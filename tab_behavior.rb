@@ -27,7 +27,7 @@ Plugin.create :tab_behavior do
 			UserConfig[:tab_behavior_default_tab] = {}
 		end
 		UserConfig[:tab_behavior_default_tab].each_value do |tab_slug|
-			@tab_info[tab_slug][:self].active! if @tab_info[tab_slug]
+			@tab_info[tab_slug][:self].active! if @tab_info[tab_slug][:self]
 		end
 	end
 
